@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   logo: {
-    height: 450,
-    width: 450,
+    height: 250,
+    width: 250,
     resizeMode: "contain",
     marginBottom: 20,
     alignSelf: "center",

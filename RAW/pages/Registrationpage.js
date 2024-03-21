@@ -56,11 +56,12 @@ function Registrationpage(props) {
           secureTextEntry = {!showPassword}
           right={
         <TextInput.Icon
-          icon={showPassword ? "eye" : "eye-off"}
-          onPress={() => {
-          Keyboard.dismiss;
-          setShowPassword(!showPassword);
+              icon={showPassword ? "eye" : "eye-off"}
+              onPress={() => {
+                Keyboard.dismiss;
+                setShowPassword(!showPassword);
           }}
+            color={COLORS.teal}
         />
           }
         />
@@ -98,8 +99,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   logo: {
-    height: 450,
-    width: 450,
+    height: 250,
+    width: 250,
     marginBottom: 20,
   },
   title: {

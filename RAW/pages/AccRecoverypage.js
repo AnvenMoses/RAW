@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    height: 500,
-    width: 400,
+    height: 250,
+    width: 250,
     resizeMode: 'contain',
     marginBottom: 20,
   },

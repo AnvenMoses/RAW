@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   logo: {
-    height: 600,
-    width: 300,
+    height: 250,
+    width: 250,
     resizeMode: 'contain',
   },
   message: {
