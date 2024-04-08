@@ -3,14 +3,13 @@
 
 import React, { useState } from 'react';
 import { View, Image, StyleSheet, Text } from 'react-native';
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Button, TextInput } from 'react-native-paper';
 import { useFonts } from 'expo-font';
+
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
-import COLORS from '../constants/colors';
 
+import COLORS from '../constants/colors';
 import logo from '../assets/RAWLOGO.jpg';
 
 function Registrationpage(props) {
@@ -36,7 +35,8 @@ function Registrationpage(props) {
     <View style={styles.container}>
       <View style={styles.contentContainer}>
         <Image source={logo} style={styles.logo} />
-        <Text style={styles.title}>Create an Account</Text>
+        <Text 
+        style={[styles.title,{ alignSelf: 'center' }]}>Create an Account</Text>
         <TextInput
           style={styles.input}
           label="Username"
@@ -84,19 +84,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     paddingHorizontal: 20,
-  },
-  contentContainer: {
-    backgroundColor: COLORS.white,
-    borderRadius: 20,
-    padding: 20,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-    elevation: 5,
   },
   logo: {
     height: 250,

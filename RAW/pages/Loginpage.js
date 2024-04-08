@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import COLORS from "../constants/colors";
 import logo from "../assets/RAWLOGO.jpg";
 
@@ -82,19 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingHorizontal: 20,
   },
-  contentContainer: {
-    backgroundColor: COLORS.white,
-    borderRadius: 20,
-    padding: 20,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-    elevation: 5,
-  },
+
   logo: {
     height: 250,
     width: 250,

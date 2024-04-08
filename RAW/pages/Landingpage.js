@@ -1,14 +1,10 @@
-/* Reynan Jhay A. Busano, Anven Moses L. Agbulos, Wyne Khristian B. Ipanag
-   IT73/IT35B - Application Development */
-
 import React from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
-import { Button } from 'react-native-paper';
+import { View, Image, StyleSheet, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
-import COLORS from '../constants/colors';
 
+import COLORS from '../constants/colors';
 import logo from '../assets/RAWLOGO.jpg';
 
 function Landingpage(props) {
@@ -22,50 +18,57 @@ function Landingpage(props) {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.contentContainer}>
-        <View style={styles.logoContainer}>
-          <Image source={logo} style={styles.logo} />
-        </View>
-        <Text style={styles.message}>Welcome to RAW!</Text>
-        <Text style={styles.userMessage}>Explore our platform and discover amazing content.</Text>
-        <Button
-          style={styles.button}
-          icon="logout"
-          mode="contained"
-          onPress={() => props.navigation.navigate('Login')}
-        >
-          Logout
-        </Button>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image source={logo} style={styles.logo} />
       </View>
-    </View>
+      <Text style={styles.message}>Welcome to RAW!</Text>
+      <Text style={styles.userMessage}>
+        Explore our platform and discover amazing computer components and peripherals.
+      </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => props.navigation.navigate("CATEGORY")}
+      >
+        <Text style={styles.buttonText}>Get Started</Text>
+      </TouchableOpacity>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Favorites</Text>
+        {/* Showcase favorites here */}
+        {/* Example button */}
+        <TouchableOpacity
+          style={styles.productButton}
+          onPress={() => props.navigation.navigate("Favorites")}
+        >
+          <Text style={styles.productButtonText}>View Favorites</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Hottest Products</Text>
+        {/* Showcase hottest products here */}
+        {/* Example button */}
+        <TouchableOpacity
+          style={styles.productButton}
+          onPress={() => props.navigation.navigate("HottestProducts")}
+        >
+          <Text style={styles.productButtonText}>View Hottest Products</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: COLORS.white,
-    padding: 20,
-  },
-  contentContainer: {
-    backgroundColor: COLORS.white,
-    borderRadius: 20,
-    padding: 20,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-    elevation: 5,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 5,
+    marginBottom: 20,
   },
   logo: {
     height: 250,
@@ -77,22 +80,60 @@ const styles = StyleSheet.create({
     fontSize: 36,
     fontWeight: 'bold',
     color: COLORS.secondary,
-    marginBottom: 5,
-    marginTop: 10,
+    marginBottom: 10,
     textAlign: 'center',
   },
   userMessage: {
     fontFamily: 'Montserrat_400Regular',
     fontSize: 18,
     color: COLORS.black,
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: 'center',
   },
   button: {
-    width: '50%',
-    marginTop: 40,
+    width: '70%',
+    marginTop: 20,
+    borderRadius: 50,
     backgroundColor: COLORS.primary,
     alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    elevation: 5,
+  },
+  buttonText: {
+    fontFamily: 'Montserrat_400Regular',
+    fontSize: 20,
+    color: COLORS.white,
+  },
+  section: {
+    width: '100%',
+    marginTop: 30,
+  },
+  sectionTitle: {
+    fontFamily: 'Poppins_400Regular',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: COLORS.secondary,
+    textAlign: 'center',
+  },
+  productButton: {
+    width: '70%',
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: COLORS.primary,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 10,
+    elevation: 3,
+  },
+  productButtonText: {
+    fontFamily: 'Montserrat_400Regular',
+    fontSize: 16,
+    color: COLORS.white,
   },
 });
 
