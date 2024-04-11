@@ -51,15 +51,6 @@ const Aboutus = () => {
           <Text style={styles.memberRole}>MAGE/CORE</Text>
         </View>
       </View>
-      <View style={styles.buttonContainer}>
-        <Button
-          onPress={() => console.log("sidedrawer")}
-          title="Back to Home"
-          color={COLORS.secondary}
-          filled
-          bgColor={COLORS.primary}
-        />
-      </View>
     </ScrollView>
   );
 };

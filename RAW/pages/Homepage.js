@@ -28,8 +28,8 @@
            <View style={styles.logoContainer}>
              <Image source={logo} style={styles.logo} />
              <Text style={styles.title}>Welcome to RAW!</Text>
-             <Text style={styles.subtitle}>Discover the best content here.</Text>
-             <Text style={styles.subtitle}>Start exploring now!</Text>
+             <Text style={styles.subtitle}>Unlock Your Ultimate PC Experience!</Text>
+             <Text style={styles.subtitle}>Begin Crafting Your Digital Masterpiece!</Text>
            </View>
            <View style={styles.buttonContainer}>
              <Button

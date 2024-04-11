@@ -33,25 +33,25 @@ function Landingpage(props) {
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Favorites</Text>
-        {/* Showcase favorites here */}
+        <Text style={styles.sectionTitle}>Featured Categories</Text> {/* Updated section title */}
+        {/* Showcase favorite categories here */}
         {/* Example button */}
         <TouchableOpacity
-          style={styles.productButton}
-          onPress={() => props.navigation.navigate("Favorites")}
+          style={styles.categoryButton}
+          onPress={() => props.navigation.navigate("FeaturedCategories")}
         >
-          <Text style={styles.productButtonText}>View Favorites</Text>
+          <Text style={styles.categoryButtonText}>View Featured Categories</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Hottest Products</Text>
-        {/* Showcase hottest products here */}
+        <Text style={styles.sectionTitle}>Infographic Insights</Text> {/* Updated section title */}
+        {/* Showcase infographic insights here */}
         {/* Example button */}
         <TouchableOpacity
-          style={styles.productButton}
-          onPress={() => props.navigation.navigate("HottestProducts")}
+          style={styles.infographicButton}
+          onPress={() => props.navigation.navigate("InfographicInsights")}
         >
-          <Text style={styles.productButtonText}>View Hottest Products</Text>
+          <Text style={styles.infographicButtonText}>Explore Infographic Insights</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     color: COLORS.secondary,
     textAlign: 'center',
   },
-  productButton: {
+  categoryButton: {
     width: '70%',
     marginTop: 10,
     borderRadius: 10,
@@ -130,7 +130,23 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     elevation: 3,
   },
-  productButtonText: {
+  categoryButtonText: {
+    fontFamily: 'Montserrat_400Regular',
+    fontSize: 16,
+    color: COLORS.white,
+  },
+  infographicButton: {
+    width: '70%',
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: COLORS.primary,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 10,
+    elevation: 3,
+  },
+  infographicButtonText: {
     fontFamily: 'Montserrat_400Regular',
     fontSize: 16,
     color: COLORS.white,

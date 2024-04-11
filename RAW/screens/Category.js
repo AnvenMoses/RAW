@@ -27,6 +27,9 @@ const Category = () => {
         <Text style={styles.categoryTitle}>PC Cases</Text>
       </View>
       <View style={styles.category}>
+        <Text style={styles.categoryTitle}>UPS</Text>
+      </View>
+      <View style={styles.category}>
         <Text style={styles.categoryTitle}>Cooling Solutions</Text>
       </View>
       <View style={styles.category}>
@@ -38,7 +41,15 @@ const Category = () => {
       <View style={styles.category}>
         <Text style={styles.categoryTitle}>Monitors</Text>
       </View>
-      {/* Add more categories as needed */}
+      <View style={styles.category}>
+        <Text style={styles.categoryTitle}>Gaming Chairs</Text>
+      </View>
+      <View style={styles.category}>
+        <Text style={styles.categoryTitle}>Headphones</Text>
+      </View>
+      <View style={styles.category}>
+        <Text style={styles.categoryTitle}>Cables</Text>
+      </View>
     </View>
   );
 };
